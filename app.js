@@ -14,6 +14,18 @@ app.use(express.static("public"));
 
 app.get("/", function(req, res){
 
+    // Code before it was created and refactored as a module in date.js
+    // let today = new Date();
+
+    // let options = {
+    //     weekday: "long",
+    //     day: "numeric",
+    //     month: "long"
+    // };
+
+    // today day = today.toLocaleDateString("en-US", options);
+
+   
 const day = date.getDate();   
 
     res.render("list", {listTitle: day, newListItems: items});
